@@ -1,6 +1,7 @@
 # xwechat
 Node微信平台服务，集成了微信平台的各种接口封装，让微信开发成为一件愉快简单的事情
 
+```
 ├── README.md
 ├── app.js
 ├── config
@@ -12,3 +13,4 @@ Node微信平台服务，集成了微信平台的各种接口封装，让微信�
 │   └── controller
 └── static
     └── scanlogin.html
+```
