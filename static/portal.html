@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跟我耍</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function GetQueryString(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+        }
+        // 用户已经关注，跳转到商城
+        if(GetQueryString('isContact') == 1){
+            window.location.href = 'http://www.genwoshua.com'
+        }else{
+            setTimeout(function() {
+                var extendArr = GetQueryString('extend').split(',')
+                var gw = extendArr[0]
+                var mac = extendArr[1]
+                var ip = extendArr[2]
+                window.location.href = 'http://dev.genwoshua.com/router/portal?ip='+ip+'&mac='+mac+'&gw='+gw
+            }, 3000);
+        }
+    </script>
+    <h1>您需要关注后才能上网哦,3秒后将回到认证页~</h1>
+</body>
+</html>

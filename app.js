@@ -7,6 +7,7 @@ const controllerDir = __dirname + config.get('server').controllerDir
 // 应用服务相关
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
+var xmlParser = require('koa-xml-body').default
 const staticServer = require('koa-static')
 const mount = require('koa-mount')
 // 文件读取
@@ -19,7 +20,8 @@ const log = require('tracer').colorConsole({ level: config.get('log').level })
 const app = new Koa()
 // 加载中间件
 app.use(mount(staticRoot,staticServer(__dirname+'/static')))			// 静态资源服务
-app.use(bodyParser())												// 入参JSON解析
+app.use(xmlParser())													// 入参XML解析
+app.use(bodyParser())													// 入参JSON解析
 // 加载所有控制器
 fs.readdirSync(controllerDir).forEach(function(filename) {
 	let moduleName = `${controllerRoot}${path.basename(filename, '.js')}`	// 请求模块名称,user.js就是/user/*的映射

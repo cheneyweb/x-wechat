@@ -9,12 +9,17 @@
   "author": "cheneyxu",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.1",
     "config": "^1.25.1",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
     "koa-mount": "^3.0.0",
     "koa-router": "^7.0.1",
     "koa-static": "^3.0.0",
+    "koa-xml-body": "^1.1.0",
+    "node-fetch": "^1.6.3",
+    "nodebatis": "^2.1.1",
+    "redis": "^2.7.1",
     "tracer": "^0.8.7"
   }
 }

@@ -4,21 +4,21 @@
         "port": 3306,
         "dbname": "alpha",
         "username": "root",
-        "password": "root"
+        "password": "@Heheda666"
     },
     "log": {
         "level": "info"
     },
     "server": {
-        "port": 8084,
+        "port": 9005,
         "staticRoot": "/xwechat/static/",
         "controllerRoot": "/xwechat/",
         "controllerDir": "/src/controller/"
     },
     "wechat": {
-        "orderAppId": "wx287493435729d181",
-        "orderAppKey": "23cc7e55044e666232c7be39f93f5b89",
+        "orderAppId": "wx159996da891fb5e1",
+        "orderAppKey": "5abd58bc93bdd58f31ea384abdcdb3b2",
         "domain": "dev.genwoshua.com",
-        "token":"GENWOSHUA"
+        "token":"MICIYUAN"
     }
 }

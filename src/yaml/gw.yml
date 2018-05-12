@@ -1,0 +1,9 @@
+namespace: 'gw'
+
+# attrs: mac, mem_free, mem_total, load_info
+
+findClientAuthByOpenid:
+    - select * from gw_client_auth where openid = :openid
+
+editClientAuth:
+    - update gw_client_auth set authed = 1 where openid = :openid

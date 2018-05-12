@@ -1,14 +1,24 @@
 {
     "db": {
-        "url": "mongodb://localhost:27017/test"
+        "host": "alpha.mysqldb.chinacloudapi.cn",
+        "port": 3306,
+        "dbname": "alpha",
+        "username": "alpha%system",
+        "password": "FmF-5mP-UCF-zmN"
     },
     "log": {
-        "level": "info"
+        "level": "warn"
     },
     "server": {
-        "port": 8084,
+        "port": 9005,
         "staticRoot": "/xwechat/static/",
         "controllerRoot": "/xwechat/",
         "controllerDir": "/src/controller/"
+    },
+    "wechat": {
+        "orderAppId": "wx287493435729d181",
+        "orderAppKey": "23cc7e55044e666232c7be39f93f5b89",
+        "domain": "app.genwoshua.com",
+        "token":"GENWOSHUA"
     }
 }
